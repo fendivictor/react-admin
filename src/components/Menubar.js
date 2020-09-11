@@ -27,6 +27,9 @@ class Menubar extends Component {
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-success">Search</Button>
                     </Form>
+                    <Nav>
+                        <Nav.Link href="/login">Signed as Admin</Nav.Link>
+                    </Nav>
                     </Navbar.Collapse>
                 </Navbar>
             </div>

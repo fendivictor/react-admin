@@ -13,3 +13,12 @@ body {
 .form-control {
   font-size: 12px;
 }
+
+.login-form {
+  width: 40%;
+  margin: auto;
+  margin-top: 15%;
+  background-color: #ddd;
+  padding: 50px;
+  border-radius: 10px;
+}
