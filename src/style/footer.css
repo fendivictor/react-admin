@@ -11,3 +11,118 @@ footer h1 {
 footer small {
     font-size: 16px;
 }
+
+.contact {
+    background-color: #041a37;
+    min-height: 400px;
+    padding-bottom: 50px;
+}
+
+
+.icon-contact-social {
+    float: left;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.icon-contact img {
+    width: 50px;
+}
+
+.icon-contact {
+    float: left;
+    padding: 20px;
+    width: 60px;
+}
+
+#btn-contact-us {
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.contact-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: white;
+}    
+
+.box-contact {
+    background-color: #082746;
+    min-height: 80px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.text-footer {
+    font-size: 1rem !important;
+    color: #fff;
+}
+
+.text-footer:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon-contact-social {
+    float: left;
+    padding: 15px;
+    width: 50%;
+    text-align: center;
+}
+
+.box-social-wrapper {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.text-icon {
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-icon p {
+    font-size: 16px;
+    margin-bottom: 10px !important;
+}
+
+.btn-send {
+    border: none;
+    color: white;
+    padding: 10px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #125d00;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+.title-send-message {
+    color: white;
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-left: 30px;
+}
