@@ -18,7 +18,11 @@ body {
   width: 40%;
   margin: auto;
   margin-top: 15%;
-  background-color: #ddd;
+  border: 1px solid green;
   padding: 50px;
   border-radius: 10px;
+}
+
+.btn-login {
+  width: 100%;
 }

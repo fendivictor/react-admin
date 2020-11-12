@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+.img-logo {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.home-section {
+    background-image: url("https://intaapp.id/assets/img/bg.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 32px 20px !important;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.social-icon {
+    width: 30px;
+    margin: 30px 10px;
+    cursor: pointer;
+}
+
+.heading-text {
+    margin-left: 30px;
+    color: #fff;
+    font-size: 4rem !important;
+}
+
+.navbar-text p {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 1.8rem;
+    max-width: 50%;
+    color: #fff;
+}
+
+#btn-contact-us {
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#btn-download-app {
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #125d00;
+    border: 3px solid #fff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button-group {
+    margin-left: 30px;
+    margin-top: 50px;
+}

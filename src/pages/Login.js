@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Form, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from 'firebase';
 
@@ -17,7 +17,11 @@ firebase.initializeApp(config);
 const provider = new firebase.auth.GoogleAuthProvider();
 
 class Login extends Component {
-    state = {user: []}
+    state = {
+        user: [],
+        email: '',
+        password: ''
+    }
 
     onBtnLoginClick = () => {
         firebase.auth().signInWithPopup(provider)
@@ -35,6 +39,22 @@ class Login extends Component {
         .catch((err) => console.log(err))
     }
 
+    onSubmitForm = (e) => {
+        e.preventDefault();
+
+        firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+        .catch(function(error) {
+            console.log(error);
+        });
+    }
+
+    onChangeFormHandler = (event) => {
+        let name = event.target.name;
+        let val = event.target.value;
+
+        this.setState({[name]: val});
+    }
+
     render() {
         return (
             <div>
@@ -42,9 +62,32 @@ class Login extends Component {
                     <Row className="login-form">
                         <Col>
                             <h2>Sign in</h2>
-                            <div style={{display : 'flex' , justifyContent:'center',marginTop:'300px'}}>
+                            <div style={{display : 'flex' , justifyContent:'center'}}>
                             { this.state.user.length === 0
-                              ? <input type='button' value='login with google' onClick={this.onBtnLoginClick} />
+                              ? 
+                                <div style={{width: '100%'}}>
+                                    <Form style={{marginBottom: '20px'}} onSubmit={this.onSubmitForm}>
+                                        <Form.Group controlId="formBasicEmail">
+                                            <Form.Label>Email address</Form.Label>
+                                            <Form.Control type="email" name="email" placeholder="Enter email" onChange={this.onChangeFormHandler} />
+                                            <Form.Text className="text-muted">
+                                            We'll never share your email with anyone else.
+                                            </Form.Text>
+                                        </Form.Group>
+        
+                                        <Form.Group controlId="formBasicPassword">
+                                            <Form.Label>Password</Form.Label>
+                                            <Form.Control type="password" name="password" placeholder="Password" onChange={this.onChangeFormHandler} />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Check type="checkbox" label="Check me out" />
+                                        </Form.Group>
+                                        <Button variant="primary" type="submit">
+                                            Submit
+                                        </Button>
+                                    </Form>
+                                    <input type='button' className="btn btn-danger btn-login btn-lg" value='Login with Google' onClick={this.onBtnLoginClick} />
+                                </div>
                               :
                                 <div>
                                     <img src={this.state.user.photoURL  } alt='broken' width="200px"/>

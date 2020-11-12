@@ -1,0 +1,13 @@
+footer {
+    padding: 10px;
+    background-color: #243238;
+    color: white;
+}
+
+footer h1 {
+    margin-left: 30px;
+}
+
+footer small {
+    font-size: 16px;
+}
